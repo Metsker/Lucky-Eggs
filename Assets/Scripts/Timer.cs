@@ -23,6 +23,7 @@ namespace DefaultNamespace
 
         private IEnumerator StartTimerRoutine(DateTime dateTime)
         {
+        //TODO: Запилить нормальное отображение таймера
             for (i = dateTime.Second; i > 0; i-=1)
             {
                 yield return new WaitForSeconds(1);
