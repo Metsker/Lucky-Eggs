@@ -19,6 +19,8 @@ public abstract class BaseEgg : MonoBehaviour
 
     public void OnClick()
     {
+    //TODO: Реализовать новые виды яиц через систему компонентов:
+    //Компонент времени, компонент кликов. Реализовать возможность комбинировать их и добавлять новые
         TouchCount++;
         _timer.RemoveTime(5);
         print(TouchCount);
