@@ -2,26 +2,30 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Egg))]
 public class TimeComponent : MonoBehaviour
 {
-
+    
+    private int _i;
+    public TimeSpan LifeTime;
+    private Egg _egg;
     private TextMeshProUGUI _text;
-    private int i;
-    private TimeSpan lifeTime;
+    
+    private SpawnManager _spawnManager;
 
     [SerializeField] private int days, hours, minutes, seconds;
 
     private void Awake()
     {
-        GameObject g = new GameObject();
-        var childTimer = Instantiate(g, gameObject.transform);
+        _spawnManager = FindObjectOfType<SpawnManager>();
+        _egg = GetComponent<Egg>();
+        _text = Instantiate(_egg.text, transform).GetComponent<TextMeshProUGUI>();
+        
 
-        _text = childTimer.AddComponent<TextMeshProUGUI>();
-
-        lifeTime = new TimeSpan(days, hours, minutes, seconds);
+        LifeTime = new TimeSpan(days, hours, minutes, seconds);
     }
 
     private void Start()
@@ -32,10 +36,10 @@ public class TimeComponent : MonoBehaviour
 
     private IEnumerator TimerRoutine()
     {
-        while (lifeTime > TimeSpan.Zero)
+        while (LifeTime > TimeSpan.Zero)
         {
-            lifeTime -= new TimeSpan(0, 0, 1);
-            UpdateUI(lifeTime);
+            LifeTime -= new TimeSpan(0, 0, 1);
+            UpdateUI(LifeTime);
             
             yield return new WaitForSeconds(1);
         }
@@ -50,13 +54,17 @@ public class TimeComponent : MonoBehaviour
     
     public void TimeRemove(int time)
     {
-        if (lifeTime > TimeSpan.Zero)
+        if (LifeTime > TimeSpan.Zero)
         {
             
-            lifeTime -= new TimeSpan(0, 0, time);
-            TimeSpan timeSpan = lifeTime > TimeSpan.Zero ? lifeTime : TimeSpan.Zero; 
+            LifeTime -= new TimeSpan(0, 0, time);
+            TimeSpan timeSpan = LifeTime > TimeSpan.Zero ? LifeTime : TimeSpan.Zero; 
             UpdateUI(timeSpan);
             
+        }
+        else
+        {
+            _spawnManager.DeleteEgg();
         }
     }
 }

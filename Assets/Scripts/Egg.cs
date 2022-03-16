@@ -7,4 +7,7 @@ using UnityEngine;
 public class Egg : MonoBehaviour
 {
     [SerializeField] private Sprite typeSprite;
+    public TextMeshProUGUI text;
+    
+    
 }
