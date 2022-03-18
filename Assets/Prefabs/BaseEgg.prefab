@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4439289543262065273
+--- !u!1 &8067525834516057187
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4439289543262065272}
-  - component: {fileID: 4439289543262065274}
-  - component: {fileID: 4439289543262065275}
-  - component: {fileID: 4439289543262065278}
-  - component: {fileID: 4439289543262065537}
-  - component: {fileID: 4439289543262065536}
+  - component: {fileID: 8067525834516057186}
+  - component: {fileID: 8067525834516057184}
+  - component: {fileID: 8067525834516057185}
+  - component: {fileID: 8067525834516057188}
   m_Layer: 5
-  m_Name: Egg
+  m_Name: BaseEgg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4439289543262065272
+--- !u!224 &8067525834516057186
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439289543262065273}
+  m_GameObject: {fileID: 8067525834516057187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,28 +39,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4439289543262065274
+--- !u!222 &8067525834516057184
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439289543262065273}
+  m_GameObject: {fileID: 8067525834516057187}
   m_CullTransparentMesh: 1
---- !u!114 &4439289543262065275
+--- !u!114 &8067525834516057185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439289543262065273}
+  m_GameObject: {fileID: 8067525834516057187}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43189263, b: 0.2688679, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -79,47 +77,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4439289543262065278
+--- !u!114 &8067525834516057188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439289543262065273}
+  m_GameObject: {fileID: 8067525834516057187}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c4fb71a2f98ec49896662e4fc3789c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   typeSprite: {fileID: 0}
-  text: {fileID: 3274881895222782892, guid: 5e1e5b18784a14cb899cd1d4a304d9c8, type: 3}
---- !u!114 &4439289543262065537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439289543262065273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa187945024694bdb9bc1acd58c424b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  touchCap: 30
-  touchTimeRemover: 10
---- !u!114 &4439289543262065536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439289543262065273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88fc6a072da04d48832272f82cc4982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  days: 0
-  hours: 1
-  minutes: 1
-  seconds: 5
+  textPref: {fileID: 3274881895222782892, guid: 5e1e5b18784a14cb899cd1d4a304d9c8, type: 3}
